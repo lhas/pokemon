@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,5 +13,26 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Redirect::to('/panel');
+});
+
+Route::post('/api/subscriber', function(Request $request) {
+
+    $subscriber = new \App\Subscriber($request->input('user'));
+
+    if(!empty($subscriber->email)) {
+
+        try {
+            $subscriber->save();
+        } catch (Exception $e) {
+
+            if($e->errorInfo[0] == '23000') {
+                return Response::json('user_already_subscribed', 500);
+            } else {
+                return Response::json('unknown_error', 500);
+            }
+        }
+    }
+
+    return Response::json($subscriber);
 });
