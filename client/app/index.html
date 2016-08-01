@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jornada Pokémon Go!</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body ng-app="pokemon">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <section class="home"></section>
+
+    <section class="sobre">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-xs-12">
+            <h1>Sobre a <strong>Jornada</strong></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <div class="cardImage">
+                <span class="pikachu"></span>
+              </div>
+              <div class="cardDescription text-center">
+                <h2>Thumbnail label</h2>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                <a href="#" class="btn btn-block btn-warning btn-pikachu">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <div class="cardImage">
+                <span class="bubbasaur"></span>
+              </div>
+              <div class="cardDescription text-center">
+                <h2>Thumbnail label</h2>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                <a href="#" class="btn btn-block btn-warning btn-bubbasaur">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <div class="cardImage">
+                <span class="squirtle"></span>
+              </div>
+              <div class="cardDescription text-center">
+                <h2>Thumbnail label</h2>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                <a href="#" class="btn btn-block btn-warning btn-squirtle">Button</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card">
+              <div class="cardImage">
+                <span class="charmander"></span>
+              </div>
+              <div class="cardDescription text-center">
+                <h2>Thumbnail label</h2>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                <a href="#" class="btn btn-block btn-warning btn-charmander">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="viaje">
+      <span class="sombra"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Viaje com seu <strong>time</strong></h1>
+            <p>Viaje junto de seus amigos e de seu time <br>
+            para outros estados ou até países com descontos incríveis, <br>
+            além de se hospedar próximo a Pokéstops e Estádios.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <span class="insignias"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="convite">
+
+      <form name="userForm" ng-submit="submitForm()" novalidate>
+
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-xs-12">
+              <h1>Peça seu <strong>convite</strong></h1>
+
+              <p>Preencha o formulário abaixo e solicite seu convite <br>
+              para participar da mais nova plataforma de descontos <br>
+              para viagens para <strong>Treinadores Pokémon.</strong></p>
+
+            </div>
+          </div>
+          <div class="row" ng-controller="ConviteController as ctrl">
+            
+
+            <div class="col-xs-4">
+
+              <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                <input type="text" name="name" ng-model="user.name" minlength="3" required placeholder="Nome" class="form-control">
+              
+                <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Insira um nome válido.</p>
+              </div>
+              
+              <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                <input type="email" name="email" ng-model="user.email" required placeholder="E-mail" class="form-control">
+
+                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Insira um e-mail válido.</p>
+              </div>
+            
+            </div>
+
+            <div class="col-xs-4">
+
+              <div class="form-group" ng-class="{ 'has-error' : userForm.sex.$invalid && !userForm.sex.$pristine }">
+                <select name="sex" ng-model="user.sex" required class="form-control">
+                  <option value="">Sexo</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                </select>
+                
+                <p ng-show="userForm.sex.$invalid && !userForm.sex.$pristine" class="help-block">Insira um sexo válido.</p>
+              </div>
+              
+              <div class="form-group" ng-class="{ 'has-error' : userForm.date_of_birth.$invalid && !userForm.date_of_birth.$pristine }">
+                <input type="text" name="date_of_birth" required placeholder="Data de Nascimento" ng-model="user.date_of_birth" ui-mask="99/99/9999" minlength="8" ui-mask-placeholder ui-mask-placeholder-char="_" class="form-control">
+              
+                <p ng-show="userForm.date_of_birth.$invalid && !userForm.date_of_birth.$pristine" class="help-block">Insira uma data de nascimento válida.</p>
+              </div>
+
+            </div>
+
+            <div class="col-xs-4">
+
+              <div class="form-group" ng-class="{ 'has-error' : userForm.localization.$invalid && !userForm.localization.$pristine }">
+                <input type="text" name="localization" placeholder="Sua cidade" required minlength="6" class="form-control" ng-model="user.localization" uib-typeahead="address for address in ctrl.getLocation($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+                
+                <p ng-show="userForm.localization.$invalid && !userForm.localization.$pristine" class="help-block">Insira uma cidade válida.</p>
+              
+                <i ng-show="loadingLocations" style="position: absolute; top: 18px; right: 10px;" class="glyphicon glyphicon-refresh"></i>
+                
+                <div ng-show="noResults" class="label label-danger">
+                  <i class="glyphicon glyphicon-remove"></i> Nenhum resultado encontrado
+                </div>
+
+              </div>
+
+              <div class="form-group" ng-class="{ 'has-error' : userForm.team.$invalid && !userForm.team.$pristine }" style="position: relative;">
+                <select name="team" ng-model="user.team" required class="form-control"> 
+                  <option value="">Time de preferência</option> 
+                  <option value="mystic">Mystic</option> 
+                  <option value="instinct">Instinct</option>
+                  <option value="valor">Valor</option>
+                </select>
+
+                <p ng-show="userForm.team.$invalid && !userForm.team.$pristine" class="help-block">Insira um time válido.</p>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+
+              <div class="row">
+                <div class="col-xs-4">
+                  <a href="javascript:void(0);" ng-click="user.team = 'mystic'" ng-class="{'active': user.team == 'mystic'}" class="time">
+                    Mystic
+                    <img src="images/mystic.png" alt="">
+                  </a>
+                </div>
+                <div class="col-xs-4">
+                  <a href="javascript:void(0);" ng-click="user.team = 'instinct'" ng-class="{'active': user.team == 'instinct'}" class="time">
+                    Instinct
+                    <img src="images/instinct.png" alt="">
+                  </a>
+                </div>
+                <div class="col-xs-4">
+                  <a href="javascript:void(0);" ng-click="user.team = 'valor'" ng-class="{'active': user.team == 'valor'}" class="time">
+                    Valor
+                    <img src="images/valor.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 pull-right">
+              <button id="btn-pedir-convite" type="submit" class="btn btn-block btn-warning" ng-disabled="userForm.$invalid">Pedir Convite</button>
+            </div>
+          </div>
+          <div class="row row-redes-sociais">
+            <div class="col-xs-12 text-center">
+              <a href="#" target="_blank" class="btn btn-facebook btn-default"><i class="fa fa-facebook"></i></a>
+              <a href="#" target="_blank" class="btn btn-instagram btn-default"><i class="fa fa-instagram"></i></a>
+              <a href="#" target="_blank" class="btn btn-pinterest btn-default"><i class="fa fa-pinterest"></i></a>
+              <a href="#" target="_blank" class="btn btn-google btn-default"><i class="fa fa-google-plus"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <p>Copyright © 2016 - Jornada Pokémon GO</p>
+          </div>
+          <div class="col-xs-6">
+            <a href="http://greencomunicacao.com.br" target="_blank" class="pull-right">Desenvolvido por: Green Comunicação</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="clearfix"></div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-mask/dist/mask.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/convite/convite.controller.js"></script>
+    <script src="scripts/module.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

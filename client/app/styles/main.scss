@@ -1,0 +1,381 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/components-font-awesome/scss/font-awesome.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.home {
+  float: left;
+  width: 100%;
+  height: 760px;
+  background: url(../images/banner-principal.jpg) top center no-repeat;
+  background-size: cover;
+  clear: both;
+  background-attachment: fixed !important;
+}
+
+.sobre {
+  float: left;
+  width: 100%;
+  min-height: 755px;
+  background: #f3f3f3;
+  clear: both;
+  padding-top: 48px;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #363636;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    float: left;
+    width: 100%;
+    clear: both;
+
+    .cardImage {
+      float: left;
+      width: 100%;
+      height: 270px;
+      background: #FFF;
+      clear: both;
+      margin-bottom: 50px;
+      box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+    }
+    .btn {
+      border: none;
+      margin-bottom: 50px;
+    }
+
+    .pikachu {
+      display: block;
+      width: 80%;
+      height: 268px;
+      background: url("../images/pikachu.png") center center no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+    }
+    .btn-pikachu {
+      background: #ffd823;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      color: #FFF;
+      height: 42px;
+      line-height: 32px;
+    }
+
+    .bubbasaur {
+      display: block;
+      width: 80%;
+      height: 268px;
+      background: url("../images/bubbasaur.png") center center no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+    }
+    .btn-bubbasaur {
+      background: #65dfb8;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      color: #FFF;
+      height: 42px;
+      line-height: 32px;
+    }
+
+    .squirtle {
+      display: block;
+      width: 80%;
+      height: 268px;
+      background: url("../images/squirtle.png") center center no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+    }
+    .btn-squirtle {
+      background: #61c8e5;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      color: #FFF;
+      height: 42px;
+      line-height: 32px;
+    }
+
+    .charmander {
+      display: block;
+      width: 80%;
+      height: 268px;
+      background: url("../images/charmander.png") center center no-repeat;
+      background-size: contain;
+      margin: 0 auto;
+    }
+    .btn-charmander {
+      background: #f29233;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      color: #FFF;
+      height: 42px;
+      line-height: 32px;
+    }
+
+    h2 {
+      margin: 0px;
+      padding: 0px;
+      font-size: 24px;
+      font-family: 'Open Sans', sans-serif;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 76px;
+    }
+
+  }
+}
+
+.viaje {
+  float: left;
+  width: 100%;
+  min-height: 760px;
+  background: url(../images/banner-2.jpg) top center no-repeat;
+  background-size: cover;
+  text-align: center;
+  clear: both;
+  position: relative;
+  background-attachment: fixed !important;
+  color: #FFF;
+  padding-top: 48px;
+
+  h1 {
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 48px;
+    font-family: 'Open Sans';
+  }
+
+  p {
+    margin: 0px;
+    margin-bottom: 48px;
+    font-size: 30px;
+    font-family: 'Open Sans';
+  }
+
+  span.sombra {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.4);
+  }
+
+  .insignias {
+    display: block;
+    width: 710px;
+    height: 347px;
+    margin: 0 auto;
+    background: url(../images/insignias.png) no-repeat;
+    background-size: contain;
+  }
+}
+
+.convite {
+  float: left;
+  width: 100%;
+  min-height: 755px;
+  background: #FFF;
+  clear: both;
+  padding-top: 48px;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #363636;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 48px;
+    font-family: 'Open Sans';
+  }
+
+  h2 {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0px;
+    margin-bottom: 48px;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Open Sans';
+  }
+
+  input.form-control,select.form-control {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #e2e2e2;
+    border-radius: 0px;
+    margin-bottom: 35px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans';
+
+    &:focus {
+      background: #cfcdcd;
+        // color: #FFF;
+
+      &::-webkit-input-placeholder {
+        // color: #FFF;
+      }
+
+      &::-moz-input-placeholder {
+        // color: #FFF;
+      }
+    }
+  }
+
+  .time {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-family: 'Open Sans';
+    color: #363636;
+    text-decoration: none;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 100%;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+      margin-top: 20px;
+    }
+
+    &:hover,&.active {
+      font-weight: bold;
+      
+      img {
+        opacity: 0.8;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+
+  #btn-pedir-convite {
+    height: 80px;
+    line-height: 60px;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: #FFF;
+    font-size: 17px;
+    background: #ffd823;
+    margin-top: 80px;
+
+    &:hover {
+      background: #c4a71f;
+    }
+  }
+
+}
+
+.row-redes-sociais {
+  .btn {
+    border: none;
+    border-radius: 100%;
+    color: #FFF;
+    font-size: 28px;
+    line-height: 42px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 6px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .btn-facebook {
+    background: #3b5998;
+  }
+  .btn-instagram {
+    background: #6a453b;
+  }
+  .btn-pinterest {
+    background: #cb2027;
+  }
+  .btn-google {
+    font-size: 24px;
+    background: #dc4e41;
+  }
+}
+
+footer {
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 40px;
+  background: #041c28;
+  line-height: 40px;
+
+  p,a {
+    margin: 0px;
+    color: #FFF;
+    font-family: 'Open Sans';
+    font-size: 12px;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+}
+
+.help-block {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute;
+  left: 16px;
+  bottom: -22px;
+}
+
+@media only screen and (max-width : 768px) {
+  .home {
+    height: 350px;
+    background-position: left center;
+  }
+  .insignias {
+    width: 300px !important;
+    height: 300px !important;
+    background-size: contain;
+  }
+}
+
+@media only screen and (max-width :992px) {
+  .home {
+    height: 450px;
+    background-position: left center;
+  }
+  .insignias {
+    background-size: contain;
+  }
+}

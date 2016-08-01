@@ -1,0 +1,25 @@
+{
+  "name": "pokemon",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "angular": "^1.5.8",
+    "angular-ui-mask": "^1.8.7",
+    "angular-ui-bootstrap": "^2.0.0",
+    "angular-bootstrap": "^2.0.0",
+    "components-font-awesome": "^4.6.3"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*"
+      ],
+      "dependencies": {}
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
